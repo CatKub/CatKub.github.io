@@ -1,0 +1,63 @@
+/* styles.css */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: transparent;
+    font-family: 'Arial', sans-serif;
+}
+
+#alert-container {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none; /* ซ่อนจนกว่าจะมีโดเนท */
+    z-index: 1000;
+}
+
+#alert-box {
+    display: flex;
+    align-items: center;
+    background: #ffe57f;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slideIn 1s ease-out, fadeOut 3s ease-in forwards 5s;
+}
+
+#avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #fff;
+}
+
+#message {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+}
+
+#donor-name {
+    color: #ff5722;
+}
+
+#amount {
+    color: #4caf50;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+    }
+}
